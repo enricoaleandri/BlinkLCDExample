@@ -4,7 +4,7 @@
 #include <LiquidCrystal_I2C.h> //This library you can add via Include Library > Manage Library > 
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
-int blink_time = 80;
+int blink_time = 100;
 int deblink_time = blink_time/2;
  
 byte eye[8] = 
@@ -23,8 +23,8 @@ byte eye[8] =
 byte happy_eye[8] = 
 {
     B00000,
-    B00100,
-    B01010,
+    B01110,
+    B10001,
     B10001,
     B10001,
     B10001,
@@ -105,18 +105,6 @@ byte cute_eyebrows_3[8] =
     B00000
 };
 
-byte cute_eyebrows_right[8] =
-{
-    B00000,
-    B00000,
-    B00000,
-    B00000,
-    B00000,
-    B00000,
-    B00000,
-    B00000
-};
-
 byte heart_1[8] =
 {
     B01110,
@@ -147,55 +135,6 @@ static int y_right_eye_position = 12;
 static int x_eye_position = 1;
 
 
-void drawCharter(int num){
-  switch(num){
-    case 1: {
-      lcd.createChar(1,eye);
-      lcd.write(1);
-      break;
-    }
-    case 2: {
-      lcd.createChar(2,blinked_eye);
-      lcd.write(1);
-      break;
-    }
-    case 3: {
-      lcd.createChar(3,happy_eye);
-      lcd.write(1);
-      break;
-    }
-    case 4: {
-      lcd.createChar(4,blinked_happy_eye);
-      lcd.write(1);
-      break;
-    }
-    case 5: {
-      lcd.createChar(1,heart_1);
-      lcd.write(1);
-      break;
-    }
-    case 6: {
-      lcd.createChar(1,heart_2);
-      lcd.write(1);
-      break;
-    }
-    case 10: {
-      lcd.createChar(5,cute_eyebrows_1);
-      lcd.write(1);
-      break;
-    }
-    case 11: {
-      lcd.createChar(6,cute_eyebrows_2);
-      lcd.write(1);
-      break;
-    }
-    case 12: {
-      lcd.createChar(7,cute_eyebrows_3);
-      lcd.write(1);
-      break;
-    }
-  }
-}
 void setup()
 {
   lcd.init();   // initializing the LCD

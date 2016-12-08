@@ -14,7 +14,7 @@ To programm the ESP, use the [Arduino IDE](https://www.arduino.cc/en/Main/Softwa
 
 To run the display use this library  :
 
-![alt tag](http://www.slumberjer.com/myardu/wp-content/uploads/2016/03/library.png)
+![alt tag](https://raw.githubusercontent.com/enricoaleandri/BlinkLCDExample/master/image/LiquidCrystalLibrary.png)
 
 Then connect the I2C module to NodeMCU  as here:
 
@@ -23,7 +23,7 @@ Then connect the I2C module to NodeMCU  as here:
 * +ve 5V power supply –> VCC(LCD)
 * ground -ve –> GND(LCD)
 
-![alt tag](https://www.losant.com/hs-fs/hubfs/Blog/connect-lcd-nodemcu/wiring.jpg?noresize=true&t=1480964054139&width=640&name=wiring.jpg)
+![alt tag](https://raw.githubusercontent.com/enricoaleandri/BlinkLCDExample/master/image/DatasheetConnection.jpeg)
 
 
 ### Simple Example
@@ -50,6 +50,23 @@ void loop()
   // Nothing Absolutely Nothing!
 }
 ```
+
+###Blink Eyes Example
+
+Based on LCD working example above, I wrote an example of blinking Eyes for creating an Emotive Robot with emoticon Eyes blinking randomly.
+
+Here the result :
+* **BlinkEyesAngry** ![alt tag](https://raw.githubusercontent.com/enricoaleandri/BlinkLCDExample/master/image/blinkEyesAngry.jpeg)
+* **BlinkEyesCute** ![alt tag](https://raw.githubusercontent.com/enricoaleandri/BlinkLCDExample/master/image/blinkEyesCute.jpeg)
+* **BlinkEyesNormal** ![alt tag](https://raw.githubusercontent.com/enricoaleandri/BlinkLCDExample/master/image/blinkEyesNormal.jpeg)
+* **BlinkEyesHappy** ![alt tag](https://raw.githubusercontent.com/enricoaleandri/BlinkLCDExample/master/image/blinkEyesHappy.jpeg)
+
+
+
+This is a little preview of my Emotive Robot :
+
+![alt tag](https://raw.githubusercontent.com/enricoaleandri/BlinkLCDExample/master/image/EmotiveRobot.gif)
+
 
 
 ### Note
